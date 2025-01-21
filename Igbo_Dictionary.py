@@ -131,4 +131,4 @@ back_button = tk.Button(translation_frame, text="Back", width=40, pady=10, comma
 heading.pack()
 pack_first_page()
 
-window.mainloop() igbo
+window.mainloop()  igbo dictionary
