@@ -98,15 +98,39 @@ french_dictionary = {
     'bonsoir': "Good evening",
 }
 
+spanish_dictionary = {
+    'hola': "hello",
+    'buenas dias': "good morning",
+    'buenas tardes': "good afternoon",
+    'buenas noches': "good evening",
+    'me llamo': "my name is",
+    'como estas': "how are you",
+    'soy': "I am",
+    'estoy bien': "I'm fine",
+    'izquierda': "left",
+    'derecha': "right",
+    'adelante': "forward",
+    'atras': "backward",
+    'uno': "one",
+    'dos': "two",
+    'tres': "three",
+    'cuatro': "four",
+    'pollo': "chicken",
+    'leche': "milk",
+    'yogur': "yogurt",
+    'pan': "bread",
+}
+
 current_language = None
 
 def translate_word(word, language):
-    word = word.lower()  
+    word = word.lower()
     dictionary_map = {
         "igbo": igbo_dictionary,
         "yoruba": yoruba_dictionary,
         "nupe": nupe_dictionary,
         "french": french_dictionary,
+        "spanish": spanish_dictionary,
     }
 
     if language not in dictionary_map:
@@ -120,7 +144,6 @@ def translate_word(word, language):
     else:
         translation.set("Word not found")
 
-
 def handle_navigate_forward(target_language):
     global current_language
     current_language = target_language
@@ -132,13 +155,11 @@ def handle_navigate_forward(target_language):
     translate_button.pack()
     back_button.pack()
 
-
 def handle_navigate_back():
     translation.set("")
     word_entry.delete(0, tk.END)
     translation_frame.pack_forget()
     pack_first_page()
-
 
 heading = tk.Label(window, text="Welcome to the Multi-language Dictionary", font=("Times New Roman", 20), pady=20)
 sub_heading = tk.Label(window, text="Select a language to translate", font=("Times New Roman", 15), pady=10)
@@ -150,7 +171,8 @@ igbo_button = tk.Button(button_frame, text="Igbo", width=20, pady=5, command=lam
 french_button = tk.Button(button_frame, text="French", width=20, pady=5,
                           command=lambda: handle_navigate_forward("french"))
 nupe_button = tk.Button(button_frame, text="Nupe", width=20, pady=5, command=lambda: handle_navigate_forward("nupe"))
-
+spanish_button = tk.Button(button_frame, text="Spanish", width=20, pady=5,
+                           command=lambda: handle_navigate_forward("spanish"))
 
 def pack_first_page():
     button_frame.pack()
@@ -158,7 +180,7 @@ def pack_first_page():
     igbo_button.pack()
     french_button.pack()
     nupe_button.pack()
-
+    spanish_button.pack()
 
 translation = StringVar()
 translation_frame = tk.Frame(window)
