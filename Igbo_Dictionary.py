@@ -144,7 +144,10 @@ def translate_word(word, language):
     else:
         translation.set("Word not found")
 
-def handle_navigate_forward(target_language):
+
+
+heading = tk.Label(window, text="Welcome to the Multi-language Dictionary", font=("Times New Roman", 20), pady=20)
+sub_heading = tk.Label(window, def handle_navigate_forward(target_language):
     global current_language
     current_language = target_language
     button_frame.pack_forget()
@@ -159,10 +162,7 @@ def handle_navigate_back():
     translation.set("")
     word_entry.delete(0, tk.END)
     translation_frame.pack_forget()
-    pack_first_page()
-
-heading = tk.Label(window, text="Welcome to the Multi-language Dictionary", font=("Times New Roman", 20), pady=20)
-sub_heading = tk.Label(window, text="Select a language to translate", font=("Times New Roman", 15), pady=10)
+    pack_first_page()text="Select a language to translate", font=("Times New Roman", 15), pady=10)
 
 button_frame = tk.Frame(window)
 yoruba_button = tk.Button(button_frame, text="Yoruba", width=20, pady=5,
