@@ -124,6 +124,7 @@ spanish_dictionary = {
 current_language = None
 
 
+
 def translate_word(word, language):
     word = word.lower()
     dictionary_map = {
@@ -133,7 +134,6 @@ def translate_word(word, language):
         "french": french_dictionary,
         "spanish": spanish_dictionary,
     }
-
     if language not in dictionary_map:
         translation.set("Invalid Language")
         return
