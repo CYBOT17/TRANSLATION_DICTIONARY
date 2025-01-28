@@ -74,7 +74,29 @@ nupe_dictionary = {
     'eyi': "guinea corn",
     'kubelozu': "good evening",
 }
+French_dictionary = {
+    'bonjour': "Good Morning",
+    'merci': "Thank you",
+    'qui': "Yes",
+    'non': "No",
+    'excuse-moi': "Excuse me",
+    'pardon': "Sorry",
+    'comment': "How",
+    'pourquol': "Why",
+    'quand': "When",
+    'qui': "Who",
+    'je': "I",
+    'tu': "You",
+    'il': "He",
+    'elle': "She",
+    'nous': "We",
+    'et': "And",
+    'bon': "Good",
+    'chaud': "Hot",
+    'froid': "Cold",
+    'bonsoir': "Good evening"
 
+}
 
 
 spanish_dictionary = {
