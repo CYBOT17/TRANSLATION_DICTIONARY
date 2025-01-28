@@ -175,27 +175,3 @@ french_button = tk.Button(button_frame, text="French", width=20, pady=5,command=
 nupe_button = tk.Button(button_frame, text="Nupe", width=20, pady=5, command=lambda: handle_navigate_forward("nupe"))
 spanish_button = tk.Button(button_frame, text="Spanish", width=20, pady=5,
                            command=lambda: handle_navigate_forward("spanish"))
-
-
-def pack_first_page():
-    button_frame.pack()
-    yoruba_button.pack()
-    igbo_button.pack()
-    french_button.pack()
-    nupe_button.pack()
-    spanish_button.pack()
-
-
-translation = StringVar()
-translation_frame = tk.Frame(window)
-word_entry = tk.Entry(translation_frame, width=30, font=("Arial", 14))
-translate_button = tk.Button(translation_frame, text="Translate", width=20,command=lambda: translate_word(word_entry.get(), current_language))
-translation_label = tk.Label(translation_frame, textvariable=translation, font=("Arial", 14), pady=10)
-back_button = tk.Button(translation_frame, text="Back", width=20, command=handle_navigate_back)
-
-heading.pack()
-sub_heading.pack()
-pack_first_page()
-
-window.mainloop()
-
